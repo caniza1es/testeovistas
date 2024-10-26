@@ -29,20 +29,22 @@ body {
     flex-wrap: wrap;
 }
 
-.nav-left, .nav-right {
+/* Contenedor izquierdo de la navbar */
+.nav-left {
     display: flex;
     align-items: center;
     gap: 15px;
-}
-
-.nav-left {
     flex: 1;
 }
 
+/* Contenedor derecho de la navbar */
 .nav-right {
+    display: flex;
+    align-items: center;
     gap: 10px;
 }
 
+/* Botones de la navbar */
 .nav-right .btn {
     background-color: #ffffff;
     color: #0288d1;
@@ -76,16 +78,16 @@ body {
     width: 100%;
     max-width: 300px;
     font-size: 1rem;
-    border: 2px solid #ffffff; /* Mantiene el borde blanco para contraste */
+    border: 2px solid #0288d1; /* Borde azul para visibilidad */
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     outline: none;
-    background-color: #ffffff; /* Fondo blanco para el input */
+    background-color: #ffffff; /* Fondo blanco */
     color: #333;
 }
 
 .navbar .search-btn {
-    background-color: #ffffff; /* Fondo blanco para el botón */
+    background-color: #0288d1; /* Fondo azul */
     border: none;
     border-radius: 8px;
     padding: 10px;
@@ -98,24 +100,22 @@ body {
 }
 
 .navbar .search-btn:hover {
-    background-color: #b3e5fc;
+    background-color: #0277bd; /* Azul más oscuro al hover */
 }
 
 .navbar .search-btn img {
-    filter: brightness(0) invert(1); /* Hace que el icono sea blanco */
+    filter: brightness(0) invert(1); /* Icono blanco */
     width: 20px;
     height: 20px;
 }
 
 /* Contenedor base que agrupa el contenido principal */
 .base-container {
-    max-width: 900px;
-    width: 100%;
-    margin: 20px auto;
-    padding: 0 20px;
+    flex: 1; /* Toma el espacio restante después de la navbar */
     display: flex;
-    flex-direction: column;
-    gap: 30px; /* Espacio uniforme entre la barra de búsqueda y el contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    padding: 20px;
 }
 
 /* Contenedor principal */
@@ -125,6 +125,7 @@ body {
     border-radius: 12px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     width: 100%;
+    max-width: 900px;
     box-sizing: border-box;
     animation: fadeIn 1s forwards;
     display: flex;
