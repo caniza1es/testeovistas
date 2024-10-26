@@ -12,21 +12,24 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: #e0f7fa; /* Azul claro */
     color: #333;
-    padding: 20px;
+    padding: 0;
+    margin: 0;
+    min-height: 100vh; /* Aseguramos que el body ocupe toda la altura visible */
+    display: flex;
+    justify-content: center; /* Centramos el contenedor horizontalmente */
+    align-items: center; /* Centramos el contenedor verticalmente */
+    flex-direction: column; /* Garantizamos que el contenido siempre se muestre verticalmente */
 }
 
-/* Contenedor principal centrado */
+/* Contenedor principal centrado y responsivo */
 .container {
     max-width: 900px;
+    width: 90%; /* Se adapta al ancho de la pantalla */
     background-color: white;
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-    margin: auto; /* Centramos el contenedor horizontalmente */
-    position: absolute; /* Posicionamiento absoluto */
-    top: 50%; /* Posicionamos el contenedor a la mitad verticalmente */
-    left: 50%; /* Posicionamos el contenedor a la mitad horizontalmente */
-    transform: translate(-50%, -50%); /* Centramos realmente en ambos ejes */
+    box-sizing: border-box; /* Asegura que el padding se respete */
 }
 
 /* 2. COMPONENTES REUTILIZABLES */
@@ -37,6 +40,7 @@ body {
     color: #0288d1; /* Azul profundo */
     text-align: center;
     margin-bottom: 5px;
+    white-space: nowrap; /* Evita que el título se divida en varias líneas */
 }
 
 /* Subtítulo sutil debajo del título principal */
