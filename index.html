@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matumbë - Inicio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">Matumbë</div>
+        <div>
+            <a href="#" class="active">Inicio</a>
+            <a href="login.html">Ingreso</a>
+            <a href="register.html">Registro</a>
+        </div>
+    </header>
+
+    <section class="main-content container">
+        <h1>Bienvenido a Matumbë</h1>
+        <p>Un diccionario y traductor de la lengua Kamëntšá, para preservar y compartir el conocimiento de nuestra cultura.</p>
+
+        <!-- Barra de búsqueda -->
+        <div class="search-container">
+            <form action="/translate" method="GET">
+                <input type="text" placeholder="Busca palabras en Kamëntšá o Español..." name="query" required>
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+
+        <!-- Widgets de funciones -->
+        <div class="widgets">
+            <div class="widget-box">
+                <h3>Búsqueda de palabras</h3>
+                <p>Busca palabras en Kamëntšá o Español y encuentra su significado equivalente.</p>
+            </div>
+            <div class="widget-box">
+                <h3>Pronunciación</h3>
+                <p>Escucha la pronunciación correcta de palabras en Kamëntšá.</p>
+            </div>
+            <div class="widget-box">
+                <h3>Contribuciones comunitarias</h3>
+                <p>Colabora con nuevas palabras y frases para el diccionario.</p>
+            </div>
+            <div class="widget-box">
+                <h3>Libreta de favoritos</h3>
+                <p>Guarda palabras importantes en tu libreta de favoritos.</p>
+            </div>
+            <div class="widget-box">
+                <h3>Traductor Kamëntšá - Español</h3>
+                <p>Traduce frases entre Kamëntšá y Español fácilmente.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Matumbë. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
