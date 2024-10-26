@@ -12,8 +12,6 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: #e0f7fa; /* Azul claro */
     color: #333;
-    margin: 0;
-    padding: 0;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -22,33 +20,27 @@ body {
 /* Barra de navegación */
 .navbar {
     background-color: #0288d1;
-    padding: 10px 20px;
+    padding: 15px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.nav-left, .nav-right {
+.nav-left,
+.nav-right {
     display: flex;
     align-items: center;
-    gap: 15px;
-}
-
-.nav-left {
-    flex: 1;
-}
-
-.nav-right {
-    gap: 10px;
+    gap: 20px;
 }
 
 .nav-right .btn {
     background-color: #ffffff;
     color: #0288d1;
     border: none;
-    padding: 8px 16px;
-    border-radius: 8px;
+    padding: 10px 20px;
+    border-radius: 25px;
     cursor: pointer;
     font-size: 1rem;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -63,7 +55,7 @@ body {
 }
 
 /* Barra de búsqueda dentro de la navbar */
-.navbar .search-bar {
+.search-bar {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -71,23 +63,27 @@ body {
     max-width: 400px;
 }
 
-.navbar .search-bar input {
-    padding: 10px;
+.search-bar input {
+    padding: 10px 15px;
     width: 100%;
-    max-width: 300px;
     font-size: 1rem;
-    border: 2px solid #0288d1; /* Borde azul para visibilidad */
-    border-radius: 8px;
+    border: 2px solid #0288d1;
+    border-radius: 25px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     outline: none;
-    background-color: #ffffff; /* Fondo blanco */
+    background-color: #ffffff;
     color: #333;
+    transition: border-color 0.3s ease;
 }
 
-.navbar .search-btn {
-    background-color: #0288d1; /* Fondo azul */
+.search-bar input:focus {
+    border-color: #0277bd;
+}
+
+.search-btn {
+    background-color: #0288d1;
     border: none;
-    border-radius: 8px;
+    border-radius: 50%;
     padding: 10px;
     cursor: pointer;
     display: flex;
@@ -97,38 +93,38 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.navbar .search-btn:hover {
-    background-color: #0277bd; /* Azul más oscuro al hover */
+.search-btn:hover {
+    background-color: #0277bd;
 }
 
-.navbar .search-btn img {
-    filter: brightness(0) invert(1); /* Icono blanco */
+.search-btn img {
+    filter: brightness(0) invert(1);
     width: 20px;
     height: 20px;
 }
 
 /* Contenedor base que agrupa el contenido principal */
 .base-container {
-    flex: 1; /* Toma el espacio restante después de la navbar */
+    flex: 1;
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
 }
 
 /* Contenedor principal */
 .container {
     background-color: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 900px;
+    max-width: 1000px;
     box-sizing: border-box;
     animation: fadeIn 1s forwards;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 25px;
 }
 
 /* Animaciones */
@@ -155,139 +151,143 @@ body {
 
 /* Título principal */
 .title {
-    font-size: 2.8rem;
+    font-size: 3rem;
     color: #0288d1;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     animation: bounce 2s ease;
 }
 
 /* Subtítulo */
 .subtitle {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: #555;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     font-style: italic;
     opacity: 0;
     animation: fadeIn 2s forwards;
     animation-delay: 0.5s;
 }
 
-/* Pronunciación */
-.pronunciation p {
-    font-size: 1.1rem;
-    color: #555;
-    font-style: italic;
-    margin-bottom: 10px;
-}
-
-/* Definición */
-.definition p {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-}
-
-/* Ejemplos */
-.example-item {
-    font-style: italic;
-    color: #555;
-    margin-bottom: 5px;
-}
-
-.translation-item {
-    color: #333;
-    font-size: 1.1rem;
-    font-style: normal;
-    text-align: left;
-    margin-bottom: 20px;
-}
-
-/* Grid para ejemplos */
-.examples-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-/* Sinónimos */
-.synonym {
-    display: inline-block;
-    background-color: #0288d1; /* Azul profundo */
-    color: white;
-    padding: 8px 15px; /* Aumentamos el padding */
-    border-radius: 20px;
-    margin: 5px 5px 5px 0; /* Añadimos margen derecho y superior/inferior */
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    text-decoration: none; /* Remueve subrayado por defecto */
-}
-
-.synonym:hover {
-    transform: scale(1.1);
-    background-color: #0277bd; /* Color ligeramente más oscuro al hacer hover */
-}
-
-/* Antónimos */
-.antonym {
-    display: inline-block;
-    background-color: #555;
-    color: white;
-    padding: 8px 15px; /* Aumentamos el padding */
-    border-radius: 20px;
-    margin: 5px 5px 5px 0; /* Añadimos margen derecho y superior/inferior */
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    text-decoration: none; /* Remueve subrayado por defecto */
-}
-
-.antonym:hover {
-    transform: scale(1.1);
-    background-color: #444; /* Color ligeramente más oscuro al hacer hover */
-}
-
 /* Secciones */
+.section {
+    margin-bottom: 25px;
+}
+
 .section-title {
     font-weight: 600;
     color: #0288d1;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     margin-bottom: 10px;
+    border-bottom: 2px solid #0288d1;
+    padding-bottom: 5px;
+}
+
+/* Pronunciación y Definición */
+.pronunciation p,
+.definition p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Ejemplos de uso */
+.examples-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.example-item,
+.translation-item {
+    background-color: #f1f8e9;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.example-item {
+    border-left: 4px solid #0288d1;
+}
+
+.translation-item {
+    border-left: 4px solid #4caf50;
+}
+
+/* Sinónimos y Antónimos */
+.synonyms,
+.antonyms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.synonym,
+.antonym {
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.synonym {
+    background-color: #0288d1;
+    color: white;
+}
+
+.synonym:hover {
+    transform: scale(1.05);
+    background-color: #0277bd;
+}
+
+.antonym {
+    background-color: #555;
+    color: white;
+}
+
+.antonym:hover {
+    transform: scale(1.05);
+    background-color: #444;
 }
 
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;
-        align-items: flex-start;
+        padding: 15px;
     }
 
-    .nav-left, .nav-right {
+    .nav-left,
+    .nav-right {
         width: 100%;
         justify-content: space-between;
     }
 
-    .navbar .search-bar {
-        width: 100%;
-        max-width: none;
-    }
-
-    .nav-right {
-        justify-content: flex-end;
-        margin-top: 10px;
-    }
-
-    .examples-grid {
-        grid-template-columns: 1fr; /* Los ejemplos ocupan una sola columna en pantallas pequeñas */
-    }
-
-    .title {
-        font-size: 2rem; /* Reducimos el tamaño del título */
+    .search-bar {
+        max-width: 100%;
     }
 
     .container {
-        padding: 20px; /* Ajustamos el padding en pantallas pequeñas */
+        padding: 30px 20px;
     }
 
-    .synonym, .antonym {
-        padding: 6px 12px; /* Reducimos el padding en pantallas pequeñas */
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.3rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .synonym,
+    .antonym {
+        padding: 6px 12px;
         font-size: 0.9rem;
     }
 }
@@ -299,19 +299,30 @@ body {
     }
 
     .title {
-        font-size: 1.8rem;
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
     }
 
     .section-title {
         font-size: 1.3rem;
     }
 
-    .subtitle, .pronunciation p, .definition p, .example-item, .translation-item {
+    .pronunciation p,
+    .definition p,
+    .example-item,
+    .translation-item {
         font-size: 1rem;
     }
 
     .nav-right .btn {
         padding: 6px 12px;
         font-size: 0.9rem;
+    }
+
+    .examples-grid {
+        grid-template-columns: 1fr;
     }
 }
