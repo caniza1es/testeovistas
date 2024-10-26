@@ -29,22 +29,20 @@ body {
     flex-wrap: wrap;
 }
 
-/* Contenedor izquierdo de la navbar */
-.nav-left {
+.nav-left, .nav-right {
     display: flex;
     align-items: center;
     gap: 15px;
+}
+
+.nav-left {
     flex: 1;
 }
 
-/* Contenedor derecho de la navbar */
 .nav-right {
-    display: flex;
-    align-items: center;
     gap: 10px;
 }
 
-/* Botones de la navbar */
 .nav-right .btn {
     background-color: #ffffff;
     color: #0288d1;
