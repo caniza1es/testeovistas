@@ -4,67 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Presentación y Traducción - Matumbë</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Aquí enlazamos el CSS separado -->
+    <link rel="stylesheet" href="styles.css"> <!-- Enlazamos el CSS separado -->
 </head>
 <body>
 
-    <div class="container">
-        <h1 class="title">Matumbë</h1> <!-- Nombre de la página o palabra buscada -->
-        <p class="subtitle">"La sabiduría de las palabras"</p> <!-- Subtítulo sutil y culturalmente relevante -->
-
-        <!-- Pronunciación -->
-        <div class="section pronunciation">
-            <div class="section-title">Pronunciación:</div>
-            <p>/ma-tum-bɛ/ (En formato IPA)</p> <!-- Ejemplo de pronunciación IPA -->
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <!-- Barra de búsqueda -->
+            <form class="search-bar" action="#" method="GET">
+                <input type="text" placeholder="La sabiduría de las palabras" aria-label="Buscar palabras" />
+                <button type="submit" class="search-btn" aria-label="Buscar">
+                    <img src="https://img.icons8.com/ios-filled/24/000000/search.png" alt="Ícono de búsqueda" />
+                </button>
+            </form>
         </div>
-
-        <!-- Definición -->
-        <div class="section definition">
-            <div class="section-title">Definición:</div>
-            <p>Matumbë es un diccionario y traductor de la lengua Kamëntšá, creado para preservar y enseñar las palabras y el conocimiento ancestral de la comunidad indígena colombiana Kamëntšá.</p>
+        <div class="nav-right">
+            <!-- Botones de Ingreso y Contribuir -->
+            <a href="/ingreso" class="btn">Ingreso</a>
+            <a href="/contribuir" class="btn">Contribuir</a>
         </div>
+    </nav>
 
-        <!-- Ejemplos de uso con traducción al Kamëntšá en columnas -->
-        <div class="section examples">
-            <div class="section-title">Ejemplos de uso:</div>
-            <div class="examples-grid">
-                <div class="example-item">
-                    "Matumbë me ayudó a comprender las raíces de mi lengua."
-                </div>
-                <div class="translation-item">
-                    "Matumbë jɨta narubɨnçame wa'aikñíra."
-                </div>
+    <!-- Contenedor base que agrupa el contenido principal -->
+    <div class="base-container">
+        <!-- Contenedor principal -->
+        <div class="container">
+            <h1 class="title">Matumbë</h1>
+            <p class="subtitle">"La sabiduría de las palabras"</p>
 
-                <div class="example-item">
-                    "Gracias a Matumbë, pude traducir una historia tradicional al Kamëntšá."
-                </div>
-                <div class="translation-item">
-                    "Matumbë jatña jɨta inaükla kamëntšá incañía yañíra."
-                </div>
+            <!-- Pronunciación -->
+            <div class="section pronunciation">
+                <div class="section-title">Pronunciación:</div>
+                <p>/ma-tum-bɛ/ (En formato IPA)</p>
+            </div>
 
-                <div class="example-item">
-                    "Matumbë es una herramienta invaluable para preservar nuestra cultura."
-                </div>
-                <div class="translation-item">
-                    "Matumbë jatña semtekikñana na'we kinchikbi."
+            <!-- Definición -->
+            <div class="section definition">
+                <div class="section-title">Definición:</div>
+                <p>Matumbë es un diccionario y traductor de la lengua Kamëntšá, creado para preservar y enseñar las palabras y el conocimiento ancestral de la comunidad indígena colombiana Kamëntšá.</p>
+            </div>
+
+            <!-- Ejemplos de uso -->
+            <div class="section examples">
+                <div class="section-title">Ejemplos de uso:</div>
+                <div class="examples-grid">
+                    <div class="example-item">"Matumbë me ayudó a comprender las raíces de mi lengua."</div>
+                    <div class="translation-item">"Matumbë jɨta narubɨnçame wa'aikñíra."</div>
+
+                    <div class="example-item">"Gracias a Matumbë, pude traducir una historia tradicional al Kamëntšá."</div>
+                    <div class="translation-item">"Matumbë jatña jɨta inaükla kamëntšá incañía yañíra."</div>
+
+                    <div class="example-item">"Matumbë es una herramienta invaluable para preservar nuestra cultura."</div>
+                    <div class="translation-item">"Matumbë jatña semtekikñana na'we kinchikbi."</div>
                 </div>
             </div>
-        </div>
 
-        <!-- Sinónimos -->
-        <div class="section synonyms">
-            <div class="section-title">Sinónimos:</div>
-            <p class="synonym">Sabiduría</p>
-            <p class="synonym">Cultura</p>
-            <p class="synonym">Raíces</p>
-        </div>
+            <!-- Sinónimos en Kamëntšá -->
+            <div class="section synonyms">
+                <div class="section-title">Sinónimos:</div>
+                <p>
+                    <a href="/palabra1" class="synonym">ñak~si</a>
+                    <a href="/palabra2" class="synonym">kamentsãbɨn</a>
+                    <a href="/palabra3" class="synonym">samatañɨ</a>
+                </p>
+            </div>
 
-        <!-- Antónimos -->
-        <div class="section antonyms">
-            <div class="section-title">Antónimos:</div>
-            <p class="antonym">Olvido</p>
-            <p class="antonym">Desconexión</p>
-            <p class="antonym">Pérdida</p>
+            <!-- Antónimos en Kamëntšá -->
+            <div class="section antonyms">
+                <div class="section-title">Antónimos:</div>
+                <p>
+                    <a href="/palabra4" class="antonym">bɨsat</a>
+                    <a href="/palabra5" class="antonym">kensĩtã</a>
+                    <a href="/palabra6" class="antonym">maják</a>
+                </p>
+            </div>
         </div>
     </div>
 
