@@ -1,198 +1,122 @@
+/* 1. ESTRUCTURA BÁSICA */
+
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
-html, body {
-    height: 100%;
-    background-color: #f0f4f8;
-    color: #333;
-    line-height: 1.6;
-}
-
+/* Tipografía y colores globales */
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    background-color: #e0f7fa; /* Azul claro */
+    color: #333;
+    padding: 20px;
 }
 
+/* Contenedor principal centrado */
 .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 900px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    margin: auto; /* Centramos el contenedor horizontalmente */
+    position: absolute; /* Posicionamiento absoluto */
+    top: 50%; /* Posicionamos el contenedor a la mitad verticalmente */
+    left: 50%; /* Posicionamos el contenedor a la mitad horizontalmente */
+    transform: translate(-50%, -50%); /* Centramos realmente en ambos ejes */
+}
+
+/* 2. COMPONENTES REUTILIZABLES */
+
+/* Título principal (palabra o nombre de la página) */
+.title {
+    font-size: 2.8rem;
+    color: #0288d1; /* Azul profundo */
     text-align: center;
+    margin-bottom: 5px;
 }
 
-.main-content {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+/* Subtítulo sutil debajo del título principal */
+.subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    text-align: center;
+    margin-bottom: 20px;
+    font-style: italic;
 }
 
-/* Navbar responsivo */
-.navbar {
-    background-color: #0044cc;
-    padding: 10px;
-    color: white;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap; /* Asegura que los elementos se reorganicen si hay poco espacio */
-}
-
-.navbar .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
+/* Títulos de cada sección (definición, ejemplos, sinónimos, etc.) */
+.section-title {
+    font-weight: 600;
+    color: #0288d1;
+    font-size: 1.5rem;
     margin-bottom: 10px;
 }
 
-.navbar a {
-    color: white;
-    text-decoration: none;
-    padding: 8px 16px;
-    margin-bottom: 10px;
-}
+/* 3. COMPONENTES ESPECÍFICOS */
 
-.navbar a:hover {
-    background-color: #003399;
-    border-radius: 4px;
-}
-
-.navbar .active {
-    background-color: #002266;
-    border-radius: 4px;
-}
-
-/* Responsividad: Ajustes en pantallas más pequeñas */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column; /* Cambia a formato de columna en pantallas pequeñas */
-        text-align: center;
-    }
-
-    .navbar a {
-        padding: 10px 20px;
-        width: 100%;
-    }
-
-    .navbar .logo {
-        margin-bottom: 20px;
-    }
-}
-
-.main-section h1 {
-    color: #0044cc;
+/* Secciones individuales */
+.section {
     margin-bottom: 20px;
 }
 
-.widgets {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 20px 0;
+/* Definición de la palabra */
+.definition p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
 }
 
-.widget-box {
-    background-color: white;
-    padding: 20px;
-    margin: 10px;
-    width: 100%;
-    max-width: 280px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+/* Pronunciación de la palabra */
+.pronunciation p {
+    font-size: 1rem;
+    color: #555;
+    font-style: italic;
 }
 
-.widget-box:hover {
-    transform: translateY(-5px);
+/* Grid para organizar los ejemplos de uso */
+.examples-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
-.widget-box h3 {
-    color: #0044cc;
-    margin-bottom: 15px;
+/* Ejemplo de uso (en español) */
+.example-item {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 5px;
 }
 
-/* Footer */
-.footer {
-    background-color: #002266;
+/* Traducción del ejemplo de uso (en Kamëntšá) */
+.translation-item {
+    color: #333;
+    font-size: 1.1rem;
+    font-style: normal;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+/* 4. SINÓNIMOS Y ANTÓNIMOS */
+
+/* Estilos para sinónimos */
+.synonym {
+    display: inline-block;
+    background-color: #0288d1; /* Azul profundo */
     color: white;
-    padding: 10px 0;
-    text-align: center;
-    width: 100%;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-right: 5px;
 }
 
-/* Formulario */
-.form-container {
-    max-width: 400px;
-    margin: 20px;
-    background-color: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.form-container input, .form-container button {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.form-container button {
-    background-color: #0044cc;
+/* Estilos para antónimos */
+.antonym {
+    display: inline-block;
+    background-color: #555;
     color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.form-container button:hover {
-    background-color: #003399;
-}
-
-.form-container a {
-    color: #0044cc;
-    text-decoration: none;
-}
-
-.form-container a:hover {
-    text-decoration: underline;
-}
-
-/* Barra de búsqueda */
-.search-container {
-    margin: 20px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.search-container input {
-    padding: 10px;
-    width: 60%;
-    max-width: 600px;
-    border: 1px solid #ccc;
-    border-radius: 4px 0 0 4px;
-    font-size: 16px;
-}
-
-.search-container button {
-    padding: 10px 20px;
-    background-color: #0044cc;
-    color: white;
-    border: none;
-    border-radius: 0 4px 4px 0;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.search-container button:hover {
-    background-color: #003399;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-right: 5px;
 }
