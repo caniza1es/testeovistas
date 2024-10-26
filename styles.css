@@ -158,6 +158,46 @@ body {
     animation: bounce 2s ease;
 }
 
+/* Botón Primario (para botones de acción principal como "Entrar" y "Registrarse") */
+.btn-primary {
+    background-color: #0288d1; /* Azul profundo */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-primary:hover {
+    background-color: #0277bd;
+    transform: translateY(-2px);
+}
+
+/* Botón Añadir a mi Lista */
+.add-to-list-btn {
+    background-color: #4caf50; /* Verde */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+.add-to-list-btn:hover {
+    background-color: #43a047;
+    transform: translateY(-2px);
+}
+
 /* Subtítulo */
 .subtitle {
     font-size: 1.5rem;
@@ -253,6 +293,61 @@ body {
     background-color: #444;
 }
 
+/* Enlace para Registro */
+.register-link {
+    text-align: center;
+    font-size: 1rem;
+    color: #555;
+    margin-top: 10px;
+}
+
+.register-link a {
+    color: #0288d1;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.register-link a:hover {
+    color: #0277bd;
+}
+
+/* Formulario de Inicio de Sesión y Registro */
+.login-form,
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaciado consistente entre form-groups */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px; /* Espaciado entre form-groups */
+}
+
+.form-group label {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 8px; /* Espaciado entre label y input */
+}
+
+.form-group input {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 2px solid #0288d1;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    outline: none;
+    background-color: #ffffff;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #0277bd;
+}
+
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
     .navbar {
@@ -290,9 +385,21 @@ body {
         padding: 6px 12px;
         font-size: 0.9rem;
     }
+
+    /* Ajustes para botones primarios */
+    .btn-primary {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    /* Reposicionar el botón en pantallas pequeñas */
+    .add-to-list-btn {
+        position: static;
+        margin: 10px auto 0;
+        display: block;
+    }
 }
 
-/* Ajustes para pantallas muy pequeñas */
 @media (max-width: 480px) {
     body {
         padding: 10px;
@@ -324,5 +431,11 @@ body {
 
     .examples-grid {
         grid-template-columns: 1fr;
+    }
+
+    /* Ajustes para botones primarios */
+    .btn-primary {
+        padding: 8px 16px;
+        font-size: 0.9rem;
     }
 }
